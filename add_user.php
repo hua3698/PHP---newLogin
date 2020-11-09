@@ -32,11 +32,11 @@ $insert_to_member=" insert into `member` (`name`,`birthday`,`role`,`addr`,`educa
 
 $result=$pdo->exec($insert_to_member);
 
-// if($result){
-//     header("location:index.php?msg=新增成功");
-// }else{
-//     header("location:index.php?msg=新增失敗");
+if($result){
+    header("location:index.php?msg=新增成功");
+}else{
+    header("location:index.php?msg=新增失敗");
     
-// }
+}
 
 ?>

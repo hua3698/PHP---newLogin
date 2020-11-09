@@ -1,11 +1,11 @@
 <?php
-$title = "Account Register 註冊帳號 ";
+$title = "Account Register";
 include_once('include/header.php');
 ?>
 
 <body>
     <div class="container">
-        <h2>註冊帳號</h2>
+        <h2>Sign Up</h2>
         
         <form action="add_user.php" method="post" class="col-md-6">
             <div class="list-group">
