@@ -1,11 +1,12 @@
 <?php
 $title = "Account Register 註冊帳號 ";
-include_once('header.php');
+include_once('include/header.php');
 ?>
 
 <body>
     <div class="container">
         <h2>註冊帳號</h2>
+        
         <form action="add_user.php" method="post" class="col-md-6">
             <div class="list-group">
                 <li class="list-group-item">帳號：<input type="text" name="acc"></li>
@@ -33,5 +34,5 @@ include_once('header.php');
 </body>
 
 <?php
-include_once('footer.php');
+include_once('include/footer.php');
 ?>
