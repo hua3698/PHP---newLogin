@@ -6,7 +6,7 @@
     <title>白金會員中心</title>
 </head>
 <body>
-<h1>白金會員中心</h1>
+<h1>白金會員中心<span style="font-size:1rem"><a href="logout.php" >登出</a></span></h1>
 尊爵的  你好，歡迎你
 </body>
 </html>

@@ -8,7 +8,25 @@ include_once('include/header.php');
 <body>
 <h1 class="text-center py-3">管理中心</h1>
 
+<div class="container mx-auto d-flex justify-content-between">
+<span>
 <?php
+if(isset($_COOKIE['login'])){
+    echo $_COOKIE['login']."歡迎";
+}
+
+?>
+
+</span>
+<span><a href="logout.php">登出</a></span>
+</div>
+
+<?php
+
+// if(isset($_GET['user'])){
+//     echo $_GET['user']."歡迎";
+// }
+// 透過cookie，不需要使用網頁傳值就可以知道使用者的acc
 
 $dsn="mysql:host=localhost;dbname=member;charset=utf8";
 $pdo= new PDO($dsn,'root','');

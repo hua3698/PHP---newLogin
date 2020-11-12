@@ -24,6 +24,8 @@ if(!empty($check)){
     $member_sql="select * from `member` where `login_id`='{$check['id']}' ";
     $member=$pdo->query($member_sql)->fetch();
     $role=$member['role'];
+    setcookie("login",$acc,time()+3600);
+
 
     switch ($role) {
         case '會員':
@@ -35,10 +37,6 @@ if(!empty($check)){
         
         case '管理員':
             header('location:admin.php');
-            break;
-        
-        default:
-            # code...
             break;
     }
 
