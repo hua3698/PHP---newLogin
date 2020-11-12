@@ -1,10 +1,12 @@
 <?php
 include_once('include/header.php');  //把這個檔案的內容自動插入在這個位置
-if(isset($_COOKIE['login'])){
+session_start();
+
+if(isset($_SESSION['login'])){
 $dsn="mysql:host=localhost;dbname=member;charset:utf8";
 $pdo=new PDO($dsn,'root','') ;
 
-  $sql_user="select `member`.`role`,`login`.`acc` from member,login where `member`.`login_id`=`login`.`id` AND acc='{$_COOKIE['login']}'";
+  $sql_user="select `member`.`role`,`login`.`acc` from member,login where `member`.`login_id`=`login`.`id` AND acc='{$_SESSION['login']}'";
   echo $sql_user;
   $user=$pdo->query($sql_user)->fetch(PDO::FETCH_ASSOC);
   echo "<pre>";

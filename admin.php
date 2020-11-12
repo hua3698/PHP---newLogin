@@ -3,6 +3,8 @@
 <?php
 $title="管理中心";
 include_once('include/header.php');  
+session_start();
+
 ?>
 
 <body>
@@ -11,8 +13,8 @@ include_once('include/header.php');
 <div class="container mx-auto d-flex justify-content-between">
 <span>
 <?php
-if(isset($_COOKIE['login'])){
-    echo $_COOKIE['login']."歡迎";
+if(isset($_SESSION['login'])){
+    echo $_SESSION['login']."歡迎";
 }
 
 ?>

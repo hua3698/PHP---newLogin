@@ -7,9 +7,11 @@
 </head>
 <body>
 <h1>一般會員中心 <span style="font-size:1rem"><a href="logout.php" >登出</a></span></h1> 
-親愛的<?php
-if(isset($_COOKIE['login'])){
-    echo $_COOKIE['login'];
+親愛的 <?php
+    session_start();
+
+if(isset($_SESSION['login'])){
+    echo $_SESSION['login'];
 }
 ?>  你好，歡迎你
 </body>

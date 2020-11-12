@@ -1,6 +1,8 @@
 <?php
+    session_start();
 
-// 設定時間-100，就可以讓cookie過期
-setcookie("login",'',-100);
+// 註銷/移除 變數的函式
+unset($_SESSION['login']);
+
 header("location:index.php");
 ?>
