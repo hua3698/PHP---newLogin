@@ -3,7 +3,7 @@ include_once('include/header.php');  //把這個檔案的內容自動插入在�
 ?>
 
 <body>
-  <div class="container mt-5">
+  <div class="container my-5">
     <div class="col-6 border bg-light m-auto" style="height:300px;box-shadow:1px 1px 10px #185761">
     <div class="text-center"><?php if(isset($_GET['msg'])){ echo $_GET['msg'];} ?></div>  <!-- 從add_user傳過來 -->
 
