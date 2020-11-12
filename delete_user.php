@@ -1,10 +1,9 @@
 <?php
+//刪除使用者
 $title="刪除使用者";
 include_once('include/header.php');  
 ?>
 <?php
-//刪除使用者
-
 $dsn = "mysql:host=localhost;dbname=member;charset=utf8";
 $pdo = new PDO($dsn, 'root', '');
 
